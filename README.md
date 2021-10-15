@@ -1,5 +1,5 @@
 # algorithm.java
-
+  
     public int[] twoSum(int[] nums, int target) {
          Map<Integer, Integer> numMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -12,8 +12,6 @@
         }
         return new int[] {};
     }
-}
-
 
 import java.util.Stack;
 import java.util.HashMap;
@@ -26,7 +24,7 @@ import java.util.HashMap;
         for (int i = 0; i < s.length(); i++) {
             char n = s.charAt(i);
             if (map.keySet().contains(n))
-            stack.push(n);
+              stack.push(n);
             else if ((map.values().contains(n))){
                 if(!stack.isEmpty() && map.get(stack.peek()) == n){
                     stack.pop();
@@ -48,7 +46,7 @@ import java.util.HashMap;
         }
         return count + 1;
     }
-}
+
 
     public int removeElement(int[] nums, int val) {
         int count = 0;
@@ -60,10 +58,7 @@ import java.util.HashMap;
         }
         return count;
     }
-}
 
-import java.util.HashMap;
-class Solution {
     public boolean containsDuplicate(int[] nums) {
        Map<Integer, Integer> numMap = new HashMap<>();
        for (int i = 0; i < nums.length; i++){
@@ -77,10 +72,7 @@ class Solution {
     }
         return false;
     }
-}
 
-
-  Definition for a binary tree node.
   public class TreeNode {
       int val;
      TreeNode left;
@@ -94,7 +86,7 @@ class Solution {
       }
   }
  
-class Solution {
+
     public TreeNode invertTree(TreeNode root) {
         if (root == null){
             return root;
@@ -109,4 +101,4 @@ class Solution {
         
         return root;
     }
-}
+
