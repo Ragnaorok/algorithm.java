@@ -1,5 +1,5 @@
 # algorithm.java
-//////////////////////////////////////////////////////////////////
+
     public int[] twoSum(int[] nums, int target) {
          Map<Integer, Integer> numMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
@@ -13,7 +13,8 @@
         return new int[] {};
     }
 }
-/////////////////////////////////////////////////////////////
+
+
 import java.util.Stack;
 import java.util.HashMap;
     public boolean isValid(String s) {
@@ -37,7 +38,7 @@ import java.util.HashMap;
         return stack.empty();
     }
 }
-/////////////////////////////////////////////////////////////
+
     public int removeDuplicates(int[] nums) {
         int count = 0;
         for (int i = 1; i < nums.length; i++){
@@ -48,7 +49,7 @@ import java.util.HashMap;
         return count + 1;
     }
 }
-//////////////////////////////////////////////
+
     public int removeElement(int[] nums, int val) {
         int count = 0;
         for (int i = 0; i < nums.length; i++){
@@ -60,7 +61,7 @@ import java.util.HashMap;
         return count;
     }
 }
-///////////////////////////////////////////
+
 import java.util.HashMap;
 class Solution {
     public boolean containsDuplicate(int[] nums) {
@@ -77,22 +78,22 @@ class Solution {
         return false;
     }
 }
-///////////////////////////////////////////
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+
+
+  Definition for a binary tree node.
+  public class TreeNode {
+      int val;
+     TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+  }
+ 
 class Solution {
     public TreeNode invertTree(TreeNode root) {
         if (root == null){
@@ -102,7 +103,7 @@ class Solution {
         TreeNode left = invertTree(root.left);
         TreeNode right = invertTree(root.right);
         
-        //swap
+        swap
         root.right = left;
         root.left = right;
         
