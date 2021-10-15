@@ -13,30 +13,6 @@
         return new int[] {};
     }
 
-import java.util.Stack;
-import java.util.HashMap;
-    public boolean isValid(String s) {
-        HashMap <Character , Character> map = new HashMap <Character, Character> ();
-        map.put('(', ')');
-        map.put('{', '}');
-        map.put('[', ']');
-        Stack < Character > stack = new Stack <> ();
-        for (int i = 0; i < s.length(); i++) {
-            char n = s.charAt(i);
-            if (map.keySet().contains(n))
-              stack.push(n);
-            else if ((map.values().contains(n))){
-                if(!stack.isEmpty() && map.get(stack.peek()) == n){
-                    stack.pop();
-                }else{
-                    return false;
-                }
-            }
-        }
-        return stack.empty();
-    }
-}
-
     public int removeDuplicates(int[] nums) {
         int count = 0;
         for (int i = 1; i < nums.length; i++){
@@ -73,7 +49,7 @@ import java.util.HashMap;
         return false;
     }
 
-  public class TreeNode {
+  public lass TreeNode {
       int val;
      TreeNode left;
       TreeNode right;
@@ -101,4 +77,24 @@ import java.util.HashMap;
         
         return root;
     }
-
+    
+    public boolean isValid(String s) {
+        HashMap <Character , Character> map = new HashMap <Character, Character> ();
+        map.put('(', ')');
+        map.put('{', '}');
+        map.put('[', ']');
+        Stack < Character > stack = new Stack <> ();
+        for (int i = 0; i < s.length(); i++) {
+            char n = s.charAt(i);
+            if (map.keySet().contains(n))
+              stack.push(n);
+            else if ((map.values().contains(n))){
+                if(!stack.isEmpty() && map.get(stack.peek()) == n){
+                    stack.pop();
+                }else{
+                    return false;
+                }
+            }
+        }
+        return stack.empty();
+    }
