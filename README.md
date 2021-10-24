@@ -101,4 +101,24 @@
         String reverse = new StringBuilder(str).reverse().toString();
         return (str.equals(reverse));
     }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public int winCondition(List<int> cards) {
+	   int cardsSize = cards.size();
+	   Set<int> cardsDupe = new HashSet<>(cards);
+	   if (cardsDupe.size() == cardsSize) {
+		  int currentMax = cards[0];
+		  int currentMaxIndex = 0;
+		    for (int i = 0; i < cardsSize; ++i) {
+			    int currentCard = cards[i];
+			      if (currentCard > currentMax) {
+				      currentMax = currentCard;
+				      currentMaxIndex = i;
+			      }
+		    }
+		return currentMaxIndex;
+	  }
+	else if (cardsDupe.size() == 1) {
+		return -1;
+	}
+	return -2;
 
